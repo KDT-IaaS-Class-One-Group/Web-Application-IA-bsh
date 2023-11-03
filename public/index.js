@@ -1,5 +1,6 @@
 function submitButtont() {
   const submit = document.getElementById('text').value;
+  // submit.addEventListner('click', )
 
 const url = "http://localhost:3000/api";
 
