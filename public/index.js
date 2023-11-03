@@ -1,7 +1,7 @@
 function submitButtont() {
   const submit = document.getElementById('text').value;
 
-const url = "http://localhost:3000/api";
+const url = "http://localhost:3000";
 
   fetch(url,{
     method : "GET",
