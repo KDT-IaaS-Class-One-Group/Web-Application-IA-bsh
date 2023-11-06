@@ -84,3 +84,8 @@ img{
   width: 3vw;
   height: 5vh;
 }
+
+#chatContainer {
+  max-height: 200px; /* 원하는 높이로 설정 */
+  overflow-y: scroll;
+}
