@@ -10,22 +10,46 @@
   display: flex;
 }
 
-.left{
+#leftBox{
   width: 20vw;
   height: 100vh;
   background-color: darkgray;
   display: flex;
-  justify-content: end;
+  flex-direction: column;
+  justify-content: space-between;
   align-content: center;
   padding: 30px;
 }
 
-.left li{
+.divOne{
+  width: 15vw;
+  height: 20vh;
+  display: flex;
+  justify-content: space-between;
+}
+#chatBox{
+  width: 8vw;
+  height: 5vh;
+}
+#box{
+  width: 3vw;
+  height: 5vh;
+}
+
+.divTwo{
+  width: 15vw;
+  height: 3vh;
+  margin-bottom: 1vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+#leftBox li{
   list-style: none;
   text-decoration: none;
 }
 
-.right{
+#rightBox{
   width: 80vw;
   height: 100vh;
   background-color:white;
@@ -33,6 +57,7 @@
   justify-content: center;
   align-items: end;
 }
+
 
 nav a{
   text-decoration: none;
@@ -44,6 +69,7 @@ nav a{
   background-color: white;
   position: absolute;
   z-index: 1;
+  top: 45vw;
 }
 
 .sub-menu a{
@@ -85,7 +111,12 @@ img{
   height: 5vh;
 }
 
-#chatContainer {
-  max-height: 200px; /* 원하는 높이로 설정 */
-  overflow-y: scroll;
+#rightBox p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: lightgray;
+  margin-bottom: 30vw;
+  font-weight: bold;
 }
