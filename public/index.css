@@ -120,3 +120,10 @@ img{
   margin-bottom: 30vw;
   font-weight: bold;
 }
+
+#chat {
+  border: 1px solid #ccc;
+  height: 200px;
+  overflow-y: scroll;
+  padding: 10px;
+}
