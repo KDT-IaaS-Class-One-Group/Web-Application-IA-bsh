@@ -7,6 +7,9 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 
+const routes = require('./routes');
+app.use('/api', routes);
+
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
