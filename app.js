@@ -4,35 +4,17 @@ const app = express();
 const port = 3000;
 
 const path = require('path');
-const bodyParser = require('body-parser');
 const fs = require('fs');
 
 const routes = require('./routes');
-app.use('/api', routes);
+app.use('./rotes.js', routes.post);
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(bodyParser.json());
 
-// 데이터 파일 경로
+// 데이터 파일(data.json) 경로
 const dataFilePath = path.join(__dirname, './data/data.json');
 
-// 데이터 초기화 함수
-function resetChatData() {
-  const emptyData = [];
-  fs.writeFile(dataFilePath, JSON.stringify(emptyData, null, 2), (err) => {
-    if (err) {
-      console.error('채팅 데이터 초기화 중 오류 발생:', err);
-    } else {
-      console.log('채팅 데이터가 초기화되었습니다.');
-    }
-  });
-}
-
-// 혹시 data.json에 아무런 파일도 없으면 [] 생성
-if (!fs.existsSync(dataFilePath)) {
-  fs.writeFileSync(dataFilePath, '[]');
-}
 
 // 클라이언트로부터 POST 요청을 받아 "/sendmessage" 엔드포인트를 처리하는 핸들러 함수
 app.post('/sendmessage', (req, res) => {
@@ -44,7 +26,7 @@ app.post('/sendmessage', (req, res) => {
     return res.status(400).json({ error: 'Content is required.' });
   }
 
-  // 데이터를 파일에서 읽음
+  // 데이터를 파일(data.json)에서 읽음
   fs.readFile(dataFilePath, 'utf8', (err, data) => {
     if (err) {
       // 파일 읽기 중에 오류가 발생하면 서버 오류로 응답
