@@ -123,7 +123,8 @@ img{
 
 #chat{
   border: 1px solid #ccc;
-  max-height: 10vw; 
+  max-height: 70vh; 
   overflow-y: scroll;
-  color: #333; /* 글꼴 색상 설정 (예: 검은색 #333) */
+  color: #333;
   }
+  
