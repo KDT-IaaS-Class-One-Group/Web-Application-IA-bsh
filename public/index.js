@@ -56,9 +56,12 @@ function addMessage(message) {
   chat.scrollTop = chat.scrollHeight;
 }
 
+// 함수를 사용하여 메시지를 로컬 스토리지(Local Storage)에 저장
 function saveMessage(message) {
+  // Local Storage에 저장된 값을 가져오는 작업
   let savedMessages = JSON.parse(localStorage.getItem('chatMessages')) || [];
   savedMessages.push(message);
+  // 새로운 메시지를 추가하고 로컬 스토리지에서 이전에 저장된 메시지 목록을 갱신
   localStorage.setItem('chatMessages', JSON.stringify(savedMessages));
 }
 
