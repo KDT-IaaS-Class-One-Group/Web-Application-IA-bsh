@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const path = require('path');
-const bodyParser = require('body-parser');
 const fs = require('fs');
 
 // 데이터 파일 경로
