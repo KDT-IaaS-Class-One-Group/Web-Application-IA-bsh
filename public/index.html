@@ -8,31 +8,38 @@
 </head>
 <body>
   <div id="root">
-    <div class="left">
-      <nav>
-        <div class="container">
-          <ul>
-            <li class="ham"><a href="#"><img src="ham.png"></a>
-              <ul class="sub-menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Settings</a></li>
-                <li><a href="#">Logout</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </nav>
+    <div id="leftBox">
+      <!-- new chat, button -->
+      <div class="divOne">
+        <button id="chatBox">New Chat</button>
+        <button id="boxButton"></button>
+      </div>
+      <div class="divTwo">
+        <div>👤 Seunghee </div>
+        <nav>
+          <div class="container">
+            <ul>
+              <li class="ham"><a href="#"><img src="ham.png"></a>
+                <ul class="sub-menu">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Profile</a></li>
+                  <li><a href="#">Settings</a></li>
+                  <li><a href="#">Logout</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </div>
-    <div class="right">
+    <div id="rightBox">
       <div>
-        <div style="text-align: center;">
-          <p>ChatGPT</p>
-        </div>
-        <div>
-          <input type="text" id="text" placeholder=" Enter your message here...">
-          <button onclick="submitButton()">Submit</button>
-        </div>
+        <p>ChatGPT</p>
+          <div id="chat"></div>
+          <form id="messageForm">
+            <input type="text" id="text" placeholder=" Send a message">
+            <button id="send">Submit</button>
+          </form>
       </div>
     </div>
   </div>
